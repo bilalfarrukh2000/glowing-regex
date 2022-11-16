@@ -68,3 +68,24 @@ Examples:
 
 
 
+### Details
+
+```^``` specifies the start anchor
+
+```/^([a-z0-9_\.-]+)``` matches lowercase letters between a-z, numbers between 0-9, and ```_```, ```.``` or ```-```
+
+An @ sign must be present after this
+
+```([\da-z\.-]+)```  matches a domain pattern that can be digits, a letter between a and z and ```_```, ```.``` or ```-```
+
+After the domain a period must follow
+
+```([a-z\.]{2,6})``` Matches a group of letters or periods 2-6 characters long.
+
+```$``` is the end anchor which marks the end of the regex
+
+
+## Author
+
+Bilal Farrukh holds an Associate Degree in Business Information Systems. He loves to watch and play sports. He also loves videogames.
+GitHub Profile: https://github.com/bilalfarrukh2000/
