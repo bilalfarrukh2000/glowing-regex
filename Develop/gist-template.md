@@ -1,49 +1,54 @@
-# Title (replace with your title)
+# Regex
 
-Introductory paragraph (replace this with your text)
+Regular Expressions (regex) are expressions used to match string patterns
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+The regex below determines if a string is an email address or not. This can be extremely useful for login form data validation
+
+```
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+```
 
 ## Table of Contents
 
-- [Anchors](#anchors)
+- [Grouping and Bracket Expressions](#grouping-and-bracket-expressions) 
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
+- [Anchors](#anchors)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
-- [Grouping and Capturing](#grouping-and-capturing)
-- [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Explanation](#explanation)
 
-## Regex Components
 
 ### Anchors
 
+Anchors do not match any characters, rather they tell the regex engine where matches can begin and end
+
+```^```  anchor is called a Caret and it fixes a regex match to the beginning of a line
+```$``` anchor is called a dollar and it fixes a regex to match the end of a line
+
+As can be seen, the email regex has a caret at the start and a dollar at the end
+
 ### Quantifiers
 
-### OR Operator
+Quantifiers specify how many instances of a character should be in the input for a match
+
+Examples:
+
+```{n}``` Matches exactly n times
+
+```{n,m}``` Matches from n to m times.
+
 
 ### Character Classes
 
-### Flags
+Character classes tell the regex engine to match only one out of several character types.
 
-### Grouping and Capturing
+Examples:
 
-### Bracket Expressions
+```\w``` Matches any alphanumeric character from the basic latin alphabet 
+```\d``` Matches any digit. Equivalent to ```[0-9]```
+```.``` Matches any character except a newline
+```\.``` Matches a period. The backslash indicates that the following character should be treated as an "escaped" character
 
-### Greedy and Lazy Match
 
-### Boundaries
 
-### Back-references
-
-### Look-ahead and Look-behind
-
-## Author
-
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
