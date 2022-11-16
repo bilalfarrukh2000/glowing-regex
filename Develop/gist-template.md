@@ -16,7 +16,32 @@ The regex below determines if a string is an email address or not. This can be e
 - [Quantifiers](#quantifiers)
 - [Anchors](#anchors)
 - [Character Classes](#character-classes)
-- [Explanation](#explanation)
+- [Details](#details)
+
+
+### Grouping and Bracket Expressions
+
+We can group characters or provide a range using brackets to match multiple patterns
+
+```[xyz]``` Matches any one of the enclosed characters
+
+A range can also be specified.
+```[0-0]``` matches any character between ```0``` and ```9```
+
+The ```+``` sign indicates one or more occurences of the preceding element
+
+```ab+c``` matches ```abc```, ```abbc```, ```abbbc```, and so on, but not ```ac```
+
+
+### Quantifiers
+
+Quantifiers specify how many instances of a character should be in the input for a match
+
+Examples:
+
+```{n}``` Matches exactly n times
+
+```{n,m}``` Matches from n to m times.
 
 
 ### Anchors
@@ -28,15 +53,6 @@ Anchors do not match any characters, rather they tell the regex engine where mat
 
 As can be seen, the email regex has a caret at the start and a dollar at the end
 
-### Quantifiers
-
-Quantifiers specify how many instances of a character should be in the input for a match
-
-Examples:
-
-```{n}``` Matches exactly n times
-
-```{n,m}``` Matches from n to m times.
 
 
 ### Character Classes
